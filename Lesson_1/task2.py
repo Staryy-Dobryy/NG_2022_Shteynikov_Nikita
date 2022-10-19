@@ -9,7 +9,7 @@ elif operation == "multiple":
     print ("Result:" + str(firstNumber * secondNumber));
 elif operation == "divide":
     if secondNumber == 0:
-        print ("Invalid second number")     #cannot divide by 0
+        print ("Invalid second number")     #cannot divide by zero
     else:
         print ("Result:" + str(firstNumber / secondNumber));
 elif operation == "power":
