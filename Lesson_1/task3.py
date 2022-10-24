@@ -1,6 +1,10 @@
 try:
     value = int(input("Enter value(seconds): "))
     if value < 0: quit()
-    print ("Days: " + str(value // 86400) + "| Hours: " + str(value // 3600 % 24) + "| Minutes: " + str(value // 60 % 60) + "| Seconds: " + str(value % 60))
+    days = value // 86400
+    hours = value // 3600 % 24
+    minutes = value // 60 % 60
+    seconds = value % 60
+    print ("Days: " + str(days) + "| Hours: " + str(hours) + "| Minutes: " + str(minutes) + "| Seconds: " + str(seconds))
 except:
     print ("Invalid value")
