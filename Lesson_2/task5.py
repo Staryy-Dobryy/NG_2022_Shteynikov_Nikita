@@ -1,6 +1,6 @@
 stringArray = input("Enter string: ")
 stringArray = stringArray.split(",")
-stringArray = list(map(int, stringArray))
+stringArray = sorted(list(map(int, stringArray)))
 print("Max:", max(stringArray))
 print("Min:", min(stringArray))
-print("Sum:", sum(stringArray)-min(stringArray)-max(stringArray))
+print("Sum:", sum(stringArray[1:len(stringArray) - 1]))

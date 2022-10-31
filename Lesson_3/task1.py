@@ -1,28 +1,28 @@
-def sum(a, b):
-    print (str(a + b))
+def sum(firstNumber, secondNumber):
+    print (str(firstNumber + secondNumber))
 
-def diff(a, b):
-    print (str(a - b))
+def diff(firstNumber, secondNumber):
+    print (str(firstNumber - secondNumber))
 
-def multiple(a, b):
-    print (str(a * b))
+def multiple(firstNumber, secondNumber):
+    print (str(firstNumber * secondNumber))
 
-def divide(a, b):
-    if b == 0: 
+def divide(firstNumber, secondNumber):
+    if secondNumber == 0: 
         print ("Invalid second number")
     else:
-        print (str(a / b))
+        print (str(firstNumber / secondNumber))
 
-def power(a, b): 
-    print (str(a ** b))
+def power(firstNumber, secondNumber): 
+    print (str(firstNumber ** secondNumber))
 
-def radical(a, b):
-    if a < 0: 
+def radical(firstNumber, secondNumber):
+    if firstNumber < 0: 
         print ("Invalid first number")
-    elif b == 0: 
+    elif secondNumber == 0: 
         print ("Invalid second number")
     else: 
-        print (str(a ** (1/b)))
+        print (str(firstNumber ** (1/secondNumber)))
 
 def askNumber(value):
     try: 
