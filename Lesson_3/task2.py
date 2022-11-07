@@ -1,32 +1,55 @@
-﻿def tryTransform (value):
+﻿def _sort(string):
+    print(f"Sorted string: {sorted(string)}\n")
+
+def _count(string):
+    print(f"Count letters: {len(string)}")
+
+def _vowels(string):
+    vowels = "aeiouyAEIOUY"
+    for item in string:
+        if item in vowels: print(item, end=" ")
+    print()
+
+def _occurring(string):
+    vowels = "aeiouyAEIOUY"
+    for item in string:
+        if item not in vowels: print(item, end=" ") 
+    print()
+
+def _split(string):
+    print(f"Splited string: {string.split(' ')}")
+
+def _index(string):
+    try:
+        index = int(input("Enter index: "))
+        print(f"Your word: {string.split(' ')[index]}")
+    except:
+        print("Invalid value")
+
+def _show(string):
+    print("Your string: ", string)
+
+
+def tryTransform (value):
     try: return int(value)
     except: return value.lower()
 
 def defineOp(option, string):
     option = tryTransform(option)
-    vowels = "aeiouyAEIOUY"
     if option == "sort" or option == 1:
-        print(f"Sorted string: {sorted(string)}\n")
+        _sort(string)
     elif option == "count" or option == 2:
-        print(f"Count letters: {len(string)}")
+        _count(string)
     elif option == "vowels" or option == 3:
-        for item in string:
-            if item in vowels: print(item, end=" ")
-        print()
+        _vowels(string)
     elif option == "occurring" or option == 4:
-        for item in string:
-            if item not in vowels: print(item, end=" ") 
-        print()
+        _occurring(string)
     elif option == "split" or option == 5:
-        print(f"Splited string: {string.split(' ')}")
+        _split(string)
     elif option == "index" or option == 6:
-        try:
-            index = int(input("Enter index: "))
-            print(f"Your word: {string.split(' ')[index]}")
-        except:
-            print("Invalid value")
+        _index(string)
     elif option == "show" or option == 7:
-        print("Your string: ", string)
+        _show(string)
     elif option == "exit" or option == 8:
         exit()
     print("====================================")

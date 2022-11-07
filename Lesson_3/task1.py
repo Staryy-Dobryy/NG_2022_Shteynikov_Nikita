@@ -1,4 +1,4 @@
-def sum(firstNumber, secondNumber):
+﻿def sum(firstNumber, secondNumber):
     print (str(firstNumber + secondNumber))
 
 def diff(firstNumber, secondNumber):
@@ -32,22 +32,23 @@ def askNumber(value):
         quit()
 
 def calculate(firstNumber, secondNumber):
-    operation = input("Enter operation: sum(1) |diff(2) |multiple(3) |divide(4) |power(5) |radical(6)\n")
+    operation = input("Enter operation: sum(+) |diff(-) |multiple(*) |divide(/) |power(**) |radical(√)\n")
     print ("Result: ", end="")
-    if operation == '1': 
-        sum(firstNumber, secondNumber)
-    elif operation == '2': 
-        diff(firstNumber, secondNumber)
-    elif operation == '3': 
-        multiple(firstNumber, secondNumber)
-    elif operation == '4':
-        divide(firstNumber, secondNumber)
-    elif operation == '5': 
-        power(firstNumber, secondNumber)
-    elif operation == '6':
-        radical(firstNumber, secondNumber)
-    else: 
-        print ("Invalid operation")
+    match operation:
+        case '+': 
+            sum(firstNumber, secondNumber)
+        case '-': 
+            diff(firstNumber, secondNumber)
+        case '*': 
+            multiple(firstNumber, secondNumber)
+        case '/':
+            divide(firstNumber, secondNumber)
+        case '^': 
+            power(firstNumber, secondNumber)
+        case '√':
+            radical(firstNumber, secondNumber)
+        case _: 
+            print ("Invalid operation")
 
 def Calculator():
     firstNumber = askNumber("Enter first number: ")
